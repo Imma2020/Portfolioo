@@ -2,28 +2,29 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio de Immaculée</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Bienvenue sur mon portfolio</h1>
+    <h1>Bienvenue sur mon Portfolio</h1>
     <nav>
-      <a href="#">Accueil</a>
-      <a href="#">À propos</a>
-      <a href="#">Compétences</a>
-      <a href="#">Projets</a>
-      <a href="#">Contact</a>
+      <a href="#about">À propos</a>
+      <a href="#skills">Compétences</a>
+      <a href="#projects">Projets</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main>
-    <section>
+    <section id="about">
       <h2>À propos de moi</h2>
-      <p>Je m'appelle Akakpo Immaculée, passionnée par la créativité et le web.</p>
+      <img src="photo.jpg" alt="Ma photo" width="200">
+      <p>Je m'appelle Akakpo Immaculée, passionnée par la créativité, le design et le développement web. Je suis actuellement en formation pour améliorer mes compétences techniques.</p>
     </section>
 
-    <section>
+    <section id="skills">
       <h2>Mes compétences</h2>
       <ul>
         <li>HTML</li>
@@ -32,14 +33,32 @@
       </ul>
     </section>
 
-    <section>
+    <section id="projects">
       <h2>Mes projets</h2>
-      <p>Application de gestion de tâches créée en HTML/CSS/JS.</p>
+      <h3>Application de gestion de tâches</h3>
+      <p>Une application simple pour organiser ses tâches quotidiennes. Technologies utilisées : HTML, CSS et JavaScript.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <form onsubmit="return validerFormulaire()">
+        <label>Nom : <input type="text" id="nom" required></label><br><br>
+        <label>Email : <input type="email" id="email" required></label><br><br>
+        <label>Message :<br><textarea id="message" rows="5" required></textarea></label><br><br>
+        <button type="submit">Envoyer</button>
+      </form>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Immaculée. Tous droits réservés.</p>
+    <p>© 2025 Immaculée Akakpo</p>
   </footer>
+
+  <script>
+    function validerFormulaire() {
+      alert("Message envoyé avec succès !");
+      return false; // pour éviter l’envoi réel
+    }
+  </script>
 </body>
 </html>
